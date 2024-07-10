@@ -1,5 +1,6 @@
 import { SplashScreen } from '@capacitor/splash-screen';
 import { Camera } from '@capacitor/camera';
+import { AppsFlyer } from 'appsflyer-capacitor-plugin';
 
 window.customElements.define(
   'capacitor-welcome',
@@ -84,6 +85,9 @@ window.customElements.define(
         <p>
           <img id="image" style="max-width: 100%">
         </p>
+        <p>
+          <button class="button" id="init-appsflyer">Initialize AppsFlyer</button>
+        </p>
       </main>
     </div>
     `;
@@ -104,6 +108,28 @@ window.customElements.define(
           }
 
           image.src = photo.webPath;
+        } catch (e) {
+          console.warn('User cancelled', e);
+        }
+      });
+
+      self.shadowRoot.querySelector('#init-appsflyer').addEventListener('click', async function (e) {
+        try {
+          const afConfig = {
+            appID: '1234567890',
+            devKey: 'your_dev_key',
+            isDebug: true,
+            waitForATTUserAuthorization: 10,
+            minTimeBetweenSessions: 6,
+            registerOnDeepLink: true,
+            registerConversionListener: true,
+            registerOnAppOpenAttribution: false,
+            deepLinkTimeout: 4000,
+            useReceiptValidationSandbox: true,
+            useUninstallSandbox: true
+          };
+     
+          AppsFlyer.initSDK(afConfig).then(res => alert(JSON.stringify(res)));
         } catch (e) {
           console.warn('User cancelled', e);
         }
