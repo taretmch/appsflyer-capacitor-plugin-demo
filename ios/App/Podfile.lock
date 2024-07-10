@@ -1,4 +1,10 @@
 PODS:
+  - AppsflyerCapacitorPlugin (6.14.3):
+    - AppsFlyerFramework (= 6.14.3)
+    - Capacitor
+  - AppsFlyerFramework (6.14.3):
+    - AppsFlyerFramework/Main (= 6.14.3)
+  - AppsFlyerFramework/Main (6.14.3)
   - Capacitor (6.1.0):
     - CapacitorCordova
   - CapacitorCamera (6.0.1):
@@ -8,12 +14,19 @@ PODS:
     - Capacitor
 
 DEPENDENCIES:
+  - AppsflyerCapacitorPlugin (from `../../../appsflyer-capacitor-plugin`)
   - "Capacitor (from `../../node_modules/@capacitor/ios`)"
   - "CapacitorCamera (from `../../node_modules/@capacitor/camera`)"
   - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
   - "CapacitorSplashScreen (from `../../node_modules/@capacitor/splash-screen`)"
 
+SPEC REPOS:
+  trunk:
+    - AppsFlyerFramework
+
 EXTERNAL SOURCES:
+  AppsflyerCapacitorPlugin:
+    :path: "../../../appsflyer-capacitor-plugin"
   Capacitor:
     :path: "../../node_modules/@capacitor/ios"
   CapacitorCamera:
@@ -24,11 +37,13 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/splash-screen"
 
 SPEC CHECKSUMS:
+  AppsflyerCapacitorPlugin: d291fcfdd8d9d2d8dba4d1ec6e02d0c3a5599430
+  AppsFlyerFramework: 0a68f5b72bbbadfa71d4ae3eaf040e82d62e8518
   Capacitor: 187bd7847b6f71467015a20200a1a071be3e5f14
   CapacitorCamera: 3b77b3e8311b98220de65e63445c0e4d0b30ce3a
   CapacitorCordova: be703980ca797f847c3356f78fa175d21c8330c2
   CapacitorSplashScreen: 61645214e8f955ff2b80f16a6a3648960fe4c89f
 
-PODFILE CHECKSUM: c23ed3fd935a944047d8284cab144b362bbd00cb
+PODFILE CHECKSUM: 3198ce17263d34afae18891ad22c0236e57b7222
 
 COCOAPODS: 1.15.2
