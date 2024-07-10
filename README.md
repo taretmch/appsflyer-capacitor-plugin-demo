@@ -1,12 +1,14 @@
-## Created with Capacitor Create App
+## Setup local plugin
 
-This app was created using [`@capacitor/create-app`](https://github.com/ionic-team/create-capacitor-app),
-and comes with a very minimal shell for building an app.
+```sh
+git clone -b feature/update-capacitor-6 git@github.com:taretmch/appsflyer-capacitor-plugin.git
+cd appsflyer-capacitor-plugin
+npm i & npm run build & npm link
+```
 
-### Running this example
+## Install plugin to your project
 
-To run the provided example, you can use `npm start` command.
-
-```bash
-npm start
+```sh
+npm i /path/to/local/appsflyer-capacitor-plugin
+npx cap sync
 ```
