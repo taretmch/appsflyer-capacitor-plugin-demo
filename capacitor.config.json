@@ -1,0 +1,10 @@
+{
+  "appId": "com.github.taretmch.appsflyer",
+  "appName": "appsflyer-capacitor-plugin-demo",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

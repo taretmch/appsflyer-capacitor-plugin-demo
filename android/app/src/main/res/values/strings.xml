@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">appsflyer-capacitor-plugin-demo</string>
+    <string name="title_activity_main">appsflyer-capacitor-plugin-demo</string>
+    <string name="package_name">com.github.taretmch.appsflyer</string>
+    <string name="custom_url_scheme">com.github.taretmch.appsflyer</string>
+</resources>
